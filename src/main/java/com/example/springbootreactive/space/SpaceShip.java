@@ -8,6 +8,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SpaceShip {
+    private Integer id;
     private String name;
     private Integer crew;
+
+    public SpaceShip(String name, Integer crew) {
+        this.name = name;
+        this.crew = crew;
+    }
 }

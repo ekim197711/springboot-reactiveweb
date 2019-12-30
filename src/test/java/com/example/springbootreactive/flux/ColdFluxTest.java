@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;
 
 import java.time.Duration;
-import java.util.List;
 
 public class ColdFluxTest {
 
