@@ -34,7 +34,7 @@ public class ShipCreatorRestController {
         ships.log("atserver.");
         ships.subscribe(ship -> {
 
-                    ship.setId(new Random().nextInt());
+                    ship.setId("" + new Random().nextInt());
                     System.out.println(String.format("Ship: %s", ship));
                 }, error -> System.out.println(String.format("error: %s", error.getClass())),
                 () -> System.out.println("Donoe..."));
@@ -51,7 +51,7 @@ public class ShipCreatorRestController {
         ships.log("atserver.");
         ships.subscribe(ship -> {
                     System.out.println("one element...");
-                    ship.setId(new Random().nextInt());
+                    ship.setId("" + new Random().nextInt());
                     System.out.println(String.format("SETTING ID Ship: %s", ship));
                 }, error ->{
                     System.out.println(String.format("error: %s", error.getMessage()));
