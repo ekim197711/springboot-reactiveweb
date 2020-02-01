@@ -24,7 +24,7 @@ public class FlatMapAndMapsTest {
         System.out.println("Start of test");
         Flux<SpaceShip> flux = flux();
         flux.map(ship -> {
-            ship.setId(-1);
+            ship.setId("-1");
             return ship;
         }).flatMap(ship -> {
             return Flux.just(ship, new SpaceShip(-100, ship.getName() + "_LARGE", ship.getCrew() * 2));
